@@ -1,0 +1,68 @@
+/*--------------------------------------------------------------
+  23. Text Moving
+----------------------------------------------------------------*/
+@media screen and (min-width: 1400px) {
+  .cs-text-moving-wrap{
+    margin-top: -27px;
+    margin-bottom: -15px;
+  }
+}
+.cs-text-moving-wrap {
+  overflow: hidden;
+  .cs_text-moving_in {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    min-width: 100%;
+    gap: 70px;
+  }
+  .cs_text-moving {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 70px;
+    animation: slide-left 20s linear infinite;
+    h2 {
+      font-size: 150px;
+      text-transform: uppercase;
+      font-weight: 900;
+      color: var(--theme_light_border);
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+   .cs-text-moving-wrap{
+    .cs_text-moving {
+        gap: 30px;
+        h2 {
+          font-size: 60px;
+        }
+        svg{
+          max-height: 50px;
+        }
+      }
+   }
+  }
+.cs_animation_speed_10 {
+  animation: slide-left 10s linear infinite;
+}
+.cs_animation_speed_30 {
+  animation: slide-left 30s linear infinite;
+}
+.cs_animation_speed_40 {
+  animation: slide-left 40s linear infinite;
+}
+.cs_animation_speed_50 {
+  animation: slide-left 50s linear infinite;
+}
+.cs_text-moving_hover_push:hover .cs_text-moving {
+  animation-play-state: paused;
+}
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

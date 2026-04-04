@@ -1,0 +1,213 @@
+/*--------------------------------------------------------------
+  10. Button Style
+----------------------------------------------------------------*/
+button {
+  background-color: var(--themecolor);
+  color: var(--theme_white);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: var(--button-font-size);
+  padding: 12px 40px;
+  gap: 10px;
+  border: none;
+}
+
+button i {
+  line-height: 0px;
+}
+
+/* Primary Button Styles */
+[class^=cs-primary-] {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+}
+
+.cs-primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs-primary-btn:before,
+.cs-primary-btn:after,
+.cs-primary-btn span:before,
+.cs-primary-btn span:after {
+  z-index: -1;
+  box-sizing: border-box;
+  transition: 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 25.25%;
+  height: 0;
+  background-color: var(--themecolor_secondary);
+}
+
+.secondary-btn:before,
+.secondary-btn:after,
+.secondary-btn span:before,
+.secondary-btn span:after {
+  background-color: var(--theme_bg_secondary);
+}
+
+.cs-primary-btn:before {
+  left: 0;
+}
+
+.cs-primary-btn:after {
+  left: 50%;
+}
+
+.cs-primary-btn span:before {
+  top: auto;
+  bottom: 0;
+  left: 25%;
+}
+
+.cs-primary-btn span:after {
+  top: auto;
+  bottom: 0;
+  left: 75%;
+}
+
+.theme-dark .cs-primary-btn:hover span {
+  color: var(--theme_white);
+  transition: var(--theme-transition);
+}
+
+.cs-primary-btn:hover {
+  color: var(--theme_white);
+  transition: var(--theme-transition);
+}
+
+.cs-primary-btn:hover:before,
+.cs-primary-btn:hover:after,
+.cs-primary-btn:hover span:before,
+.cs-primary-btn:hover span:after {
+  height: 80px;
+}
+
+.cs-width-160 {
+  width: 160px;
+}
+
+.cs-width-220 {
+  width: 220px;
+}
+.cs-width-180 {
+  width: 180px;
+}
+
+
+
+/* Criss-Cross Animations */
+@-webkit-keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@-webkit-keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+/* Text Underline Animation */
+.cs-text_b_line {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cs-text_b_line i {
+  color: var(--themecolor);
+  line-height: 0px;
+}
+
+.cs-text_b_line span {
+  display: inline-block;
+  position: relative;
+  color: var(--theme_black);
+}
+
+.cs-text_b_line.cs_white_color span {
+  color: var(--theme_white);
+}
+
+.cs-text_b_line.cs_white_color i {
+  color: var(--theme_white);
+}
+
+.cs-text_b_line span:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.6s ease-out;
+}
+
+.cs-text_b_line:hover span::before {
+  transform: scaleX(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}

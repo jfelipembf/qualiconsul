@@ -1,0 +1,80 @@
+/*--------------------------------------------------------------
+  04. Form Style
+----------------------------------------------------------------*/
+form{
+  :focus-visible,
+  :focus-visible,
+  :focus,
+  :target {
+    border-bottom: 1px solid var(--themecolor);
+    border: none;
+    background: transparent;
+    color: var(--theme_black);
+  }
+  :focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+  :active {
+    color: var(--themecolor);
+  }
+  :focus {
+    border-bottom: 1px solid var(--themecolor);
+    box-shadow: none;
+  }
+  ::placeholder {
+    color: rgba($color: #101010, $alpha: 0.8);
+    font-family: "Hedvig Letters Sans";
+    &:hover {
+      color: var(--theme_black);
+    }
+  }
+}
+input,
+select,
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ececec;
+  width: 100%;
+  padding: 10px 0px;
+  margin-bottom: 30px;
+}
+
+input,
+select {
+  height: 50px;
+}
+
+.cs-form-dark form {
+  input,
+  select,
+  textarea {
+    border-bottom: 1px solid var(--theme_light_border);
+    color: var(--theme_black);
+  }
+  ::placeholder {
+    color: rgba($themeblack, $alpha: 0.8);
+    &:hover {
+      color: var(--theme_black);
+    }
+  }
+  :focus-visible,
+  :focus-visible,
+  :focus,
+  :target {
+    border-bottom: 1px solid var(--themecolor);
+  }
+  :focus {
+    border-bottom: 1px solid var(--themecolor);
+  }
+}
+
+
+@media screen and (min-width: 991px) {
+  .input-col-two {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+  }
+}

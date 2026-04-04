@@ -1,0 +1,34 @@
+/*--------------------------------------------------------------
+  27. Work Process
+----------------------------------------------------------------*/
+.cs-working-process-wrap{
+  .cs-process-item{
+    .cs-wp-icon{
+      height: 70px;
+      width: 70px;
+      border: 1px solid #ffffff;
+      display: inline-block;
+      border-radius: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+    h6{
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1199px) {
+  .cs-working-process-wrap{
+    .container{
+      margin-bottom: -40px;
+    }
+    .cs-process-item{
+      margin-bottom: 40px;
+    }
+  }
+  
+}

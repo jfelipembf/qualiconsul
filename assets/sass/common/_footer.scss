@@ -1,0 +1,128 @@
+/*--------------------------------------------------------------
+  07. Footer
+----------------------------------------------------------------*/
+footer {
+  h6 {
+    color: var(--theme-dark-heading-6-font-color);
+  }
+  .cs-constr-footer-container {
+    background: var(--theme_bg_dark);
+  }
+  P{
+    margin-bottom: 0PX;
+  }
+}
+.cs-constr-newsletter {
+  display: flex;
+  position: relative;
+  .cs-newsletter-email {
+    border: none;
+    width: 100%;
+    padding: 18px 30px;
+    font-family: var(--body-font-family);
+    background-color: var(--theme_white);
+    padding: 30px;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+  .cs-newsletter-btn {
+    position: absolute;
+    right: 0;
+    gap: 5px;
+    i{
+      font-size: 18px;
+      line-height: 0px;
+    }
+    &:hover{
+      opacity: 0.7;
+      transition: all 0.4s ease;
+    }
+  }
+  button[type="submit"] {
+    border: none;
+    font-size: var(--btn-font-family);
+    border-radius: 0px;
+    padding: 18px 30px;
+  }
+}
+
+.cs-newsletter-email {
+  color: var(--theme_white);
+  &::placeholder {
+    color: var(--theme_bg_dark);
+  }
+}
+
+
+.cs-constr-footer-menu {
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      list-style: none;
+      color: var(--theme_dark_border);
+      padding-bottom: 20px;
+
+      i {
+        margin-right: 10px;
+      }
+
+      a {
+        span {
+          color: var(--theme_white); 
+          opacity: 0.9; 
+        }
+      }
+
+      &:hover { 
+        color: var(--theme_white);
+      }
+    }
+  }
+}
+
+
+.cs-theme-copyright{
+  text-align: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var( --theme_dark_border);
+}
+
+
+@media (min-width: 1199px) {
+  .padding-lg-50{
+    padding-left: 50px;
+  }
+  footer{
+    .container{
+      width: 100%;
+    
+  }
+}}
+@media (max-width: 1199px) {
+   .cs-lg-bootm-p30{
+    padding-bottom: 40px;
+  }
+  footer{
+    .cs-constr-footer-container{
+      .cs-height-150,
+      .cs-height-130{
+        height: 80px;
+      }
+    }
+  }
+
+}

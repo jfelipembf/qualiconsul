@@ -1,0 +1,130 @@
+/*--------------------------------------------------------------
+  13. Widget Style
+----------------------------------------------------------------*/
+.widget-item.pw{
+  background: var(--themecolor);
+  color: var(--theme_white);
+}
+.search-widget {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  input {
+    margin-bottom: 0px;
+    background: var(--theme_white);
+    height: 60px;
+    border: none;
+    padding: 0px 20px;
+  }
+
+  .search-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+
+    i {
+      font-size: 26px;
+      color: var(--themecolor);
+    }
+  }
+}
+
+.category {
+
+  ul {
+    padding: 0px;
+    margin: 0px;
+
+    li {
+      list-style: none;
+      margin: 0px;
+
+      a {
+        padding: 12px;
+        display: block;
+        transition: var(--theme-transition);
+        display: flex;
+        align-items: center;
+
+        i {
+          color: var(--themecolor);
+          font-size: 20px;
+          line-height: 0px;
+          margin-right: 10px;
+        }
+
+        &:hover {
+          background-color: var(--themecolor);
+          transition: var(--theme-transition);
+          color: var(--theme_white);
+
+          i {
+            color: var(--theme_white);
+          }
+        }
+      }
+    }
+  }
+
+  &.widget-item {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.cat-w-title {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.tag-w-title {
+  margin-bottom: 10px;
+}
+
+.tag {
+  a {
+    padding: 5px 10px;
+    border: 1px solid var(--theme_light_border);
+    border-radius: 25px;
+    display: inline-block;
+    gap: 5px;
+
+    &:hover {
+      background-color: var(--themecolor);
+      border-color: var(--themecolor);
+      color: var(--theme_white);
+    }
+  }
+
+  .tag-items {
+    a {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.widget-item {
+  padding: 50px;
+}
+.service-list ul li a{
+  text-transform: uppercase;
+}
+
+.contact-widget-title{
+  padding: 25px 50px;
+  background: var(--theme-black);
+  border-bottom: 1px solid var(--theme_dark_border);
+}
+.contact-items{
+  padding: 0px 50px;
+  p{
+    margin: 0px;
+  }
+}
+.contact-widget-btn{
+  padding: 25px 50px;
+  border-top: 1px solid var(--theme_dark_border);
+}
