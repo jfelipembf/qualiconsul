@@ -4534,10 +4534,24 @@ button i {
   filter: brightness(0.8) saturate(1.2);
 }
 
+.services-wrapper .service-item .srv-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.services-wrapper .service-item:hover .srv-img::after {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 .services-wrapper .service-item .srv-img {
   position: relative;
   width: 100%;
   overflow: hidden;
+  z-index: 0;
 }
 
 .services-wrapper .service-item .srv-img img {
@@ -4549,23 +4563,63 @@ button i {
 }
 
 .services-wrapper .service-item .srv-the-hover {
-  text-align: right;
-  max-width: 285px;
+  text-align: center;
+  width: 100%;
+  height: 280px;
+  max-width: none;
+  max-height: none;
+  overflow: hidden;
   position: absolute;
-  right: 20px;
-  bottom: 100px;
+  left: 0;
+  top: auto;
+  bottom: 100%;
+  transform: translateY(10px);
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  padding: 16px;
+  pointer-events: none;
 }
 
 .services-wrapper .service-item .srv-the-hover p {
-  background-color: var(--theme_white);
-  padding: 20px;
-  border-right: 3px solid var(--themecolor);
+  background-color: transparent;
+  color: var(--theme_white);
+  padding: 0;
+  border-right: none;
+  border-radius: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  word-break: break-word;
+  max-width: 92%;
+}
+
+.services-wrapper .service-item .srv-the-hover ul {
+  background-color: transparent;
+  color: var(--theme_white);
+  padding: 0 8px !important;
+  margin: 0;
+  border-radius: 0;
+  text-align: left;
+  font-size: 14px !important;
+  line-height: 1.5;
+  max-width: 92%;
+}
+
+.services-wrapper .service-item .srv-the-hover li {
+  margin-bottom: 4px;
+}
+
+.services-wrapper .service-item .srv-the-hover li:last-child {
+  margin-bottom: 0;
+}
+
+.services-wrapper .service-item .srv-the-hover .cs-primary-btn {
+  margin-top: 14px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -4578,6 +4632,21 @@ button i {
   .service-item {
     max-width: 26.875rem;
     margin: auto;
+  }
+
+  .services-wrapper .service-item .srv-the-hover {
+    height: 280px;
+    padding: 14px;
+  }
+
+  .services-wrapper .service-item .srv-the-hover p {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .services-wrapper .service-item .srv-the-hover ul {
+    font-size: 13px !important;
+    line-height: 1.45;
   }
 }
 
