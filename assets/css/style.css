@@ -1153,16 +1153,60 @@ select {
 }
 
 .header-contact {
-  gap: 50px;
+  gap: 40px;
   display: flex;
   margin-right: 100px;
-  text-align: right;
+  text-align: left;
 }
 
-.header-contact .cs-header-phone,
-.header-contact .cs-header-email {
+.header-contact .header-contact-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-contact .header-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--themecolor);
+  transition: all 0.4s ease;
+}
+
+.header-contact .header-contact-box:hover .header-contact-icon {
+  background-color: var(--themecolor);
+  color: var(--theme_white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header-contact .header-contact-text {
   display: flex;
   flex-direction: column;
+}
+
+.header-contact .header-contact-text > span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.header-contact .header-contact-text a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.header-contact .header-contact-text a:hover {
+  color: var(--themecolor);
 }
 
 .cs_nav+.cs_toolbox {
@@ -2137,6 +2181,8 @@ footer P {
   align-items: center;
   justify-content: center;
   border-top: 1px solid var(--theme_dark_border);
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 @media (min-width: 1199px) {
@@ -2145,7 +2191,10 @@ footer P {
   }
 
   footer .container {
+    max-width: 100%;
     width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
