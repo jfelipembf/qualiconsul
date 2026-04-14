@@ -359,6 +359,22 @@ window.addEventListener("load", function () {
       });
     }
 
+    // Timeline estática — página Sobre (qc-about)
+    var $qcTimeline = $("[data-qc-timeline]");
+    if ($qcTimeline.length) {
+      var $qcNodes = $qcTimeline.find(".qc-about-timeline__node");
+      var $qcBar = $qcTimeline.find("[data-qc-progress]");
+      var total = $qcNodes.length;
+      $qcNodes.on("click", function () {
+        var idx = $qcNodes.index(this);
+        $qcNodes.removeClass("is-active").attr("aria-pressed", "false");
+        $(this).addClass("is-active").attr("aria-pressed", "true");
+        if ($qcBar.length && total > 0) {
+          $qcBar.css("width", ((idx + 1) / total) * 100 + "%");
+        }
+      });
+    }
+
     if ($(".home1-testi-slider1").length) {
       const testiSliderSwiper = new Swiper(".home1-testi-slider1", {
         speed: 1000,
