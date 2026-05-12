@@ -1,0 +1,138 @@
+/*--------------------------------------------------------------
+  05. Preloader
+----------------------------------------------------------------*/
+#constr-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--theme_black);
+  background-size: cover;
+  height: 100%;
+  z-index: 299;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloader-content{
+  display: flex;
+  min-width: 300px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+#constr-status {
+  width: 50px;
+  height: 30px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -25px;
+  display: flex;
+  justify-content: center;
+}
+
+.constr-spinner {
+  margin: 0 auto;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+}
+
+.constr-rect {
+  background-color: #fff;
+  height: 100%;
+  width: 2px;
+  display: inline-block;
+  animation: constr-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.rect2 {
+  animation-delay: -1.1s;
+}
+
+.rect3 {
+  animation-delay: -1.0s;
+}
+
+.rect4 {
+  animation-delay: -0.9s;
+}
+
+.rect5 {
+  animation-delay: -0.8s;
+}
+.rect6 {
+  animation-delay: -0.9s;
+}
+.rect7 {
+  animation-delay: -1s;
+}
+
+.constr-text {
+  margin-top: 20px;
+  color: var(--theme_white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: textfade 2s infinite ease-in-out;
+}
+
+@keyframes constr-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1.0);
+  }
+}
+
+@keyframes textfade {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+
+.cs_scrollup {
+  position: fixed;
+  bottom: -60px;
+  right: 0px;
+  color: var(--theme_black);
+  padding: 5px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  z-index: 10;
+  background-color: var(--theme_white);
+  &:hover {
+    background-color: var(--themecolor);
+    color: var(--theme_white);
+  }
+  i {
+    font-size: 20px;
+    line-height: 0px;
+  }
+}
+
+.cs_scrollup.cs_scrollup_show {
+  bottom: 0px;
+}
+
+.constr-splite-2{
+  display: inline-block;
+  overflow: hidden;
+}
+.constr-splite-2 div {
+  display: inline-block;
+  opacity: 0;
+}

@@ -1,0 +1,73 @@
+/*--------------------------------------------------------------
+  26. Pricing
+----------------------------------------------------------------*/
+.pricing-wrap{
+  .pricing-item{
+    transition: var(--theme-transition);
+    padding: 0px 40px;
+    .cs-pricing-border-with-margin{
+      position: relative;
+      height: 1px;
+      width: 100%;
+      background: var(--theme_light_border);
+      margin: 40px 0px;
+      overflow: hidden;
+    }
+    .cs-pricing-border-with-margin::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background: var(--themecolor);
+      transition: width 0.5s ease;
+    }
+    .pricing-feature-list{
+      ul{
+        li::marker {
+          color: var(--themecolor);
+        }
+      }
+    }
+
+    &:hover .cs-pricing-border-with-margin::after {
+      width: 100%;
+    }
+    &:hover{
+      .b-top-left,
+      .b-top-right,
+      .b-bottom-right,
+      .b-bottom-left{
+        .horizontal,
+        .verticle{
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
+
+.cs-pricing-contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+@media screen and (max-width: 991px) {
+  .pricing-wrap{
+    .pricing-item{
+      padding: 0px 25px;
+    }
+  }
+}
+@media screen and (max-width: 1199px) {
+  .pricing-wrap{
+    max-width: 720px;
+    margin: auto;
+    .pricing-item{
+      padding: 0px 25px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+  32. 404
+----------------------------------------------------------------*/
+.error-section-wrap{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .error-content{
+        max-width: 800px;
+    }
+}
+.error-wrap{
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+.erro-sub-title{
+    margin-bottom: 10px;
+}
+.erro-desp{
+    margin-bottom: 30px;
+}
+@media screen and (min-width:400px) {
+    .error-title{
+        font-size: 200px;
+    }
+}
+@media screen and (max-width:991px) {
+    .error-wrap{
+        background: none !important;
+    }
+}

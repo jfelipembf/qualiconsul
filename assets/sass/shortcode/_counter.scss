@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+  18. Counter Style
+----------------------------------------------------------------*/
+.cs-counter-wrap{
+    .counter-item{
+        h6{
+            margin-bottom: 30px;
+        }
+        h2{
+           margin-bottom: 5px; 
+        }
+    }
+    .counter-sep{
+        width: 1px;
+        height: 200px;
+        background-color: var(--theme_dark_border);
+    }
+    .cs-couter-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .cs-counter-wrap{
+        .counter-sep{
+            display: none;
+        }
+        .cs-couter-items{
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+            .counter-item{
+                max-width: 320px;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+    .cs-counter-wrap{
+        .cs-couter-items{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    
+}

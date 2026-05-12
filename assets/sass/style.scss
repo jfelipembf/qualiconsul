@@ -1,0 +1,74 @@
+/* 
+|......................................................................
+| Template Name: Constr
+| Author: Thememarch
+| Version: 1.0.0
+|--------------------------------------------------------------------------
+|--------------------------------------------------------------------------
+| TABLE OF CONTENTS:
+|--------------------------------------------------------------------------
+| 01. Typography
+| 02. Colors
+| 03. Settings
+| 04. Form
+| 05. Preloader
+| 06. Header
+| 07. Footer
+| 08. Spacing
+| 09. General
+| 10. Button
+| 11. Breadcrumb
+| 12. Video Modal
+| 13. Widget
+| 14. Hero
+| 15. About
+| 16. Services
+| 17. Clients
+| 18. Counter
+| 19. Team Member
+| 20. Call To Action
+| 21. Testimonial
+| 22. Project Case Study
+| 23. Text Moving
+| 24. About Feature
+| 25. Blog
+| 26. Blog_single
+| 27. Pricing
+| 28. Process
+| 29. Faq
+| 30. Contact
+ ................................................................*/
+ 
+@import "default/typography";
+@import "default/color_variable";
+@import "default/theme_settings";
+@import "default/form";
+@import "common/preloader";
+@import "common/header";
+@import "common/footer";
+@import "common/spacing";
+@import "common/general";
+@import "common/btn";
+@import "common/breadcrumb";
+@import "common/video-modal";
+@import "common/widget";
+@import "shortcode/hero";
+@import "shortcode/about";
+@import "shortcode/services";
+@import "shortcode/clients";
+@import "shortcode/counter";
+@import "shortcode/team"; 
+@import "shortcode/cta";
+@import "shortcode/testimonial";
+@import "shortcode/project";
+@import "shortcode/text_moving";
+@import "shortcode/about_feature";
+@import "shortcode/blog";
+@import "shortcode/blog_post";
+@import "shortcode/pricing";
+@import "shortcode/process";
+@import "shortcode/faq";
+@import "shortcode/contact";
+@import "shortcode/gallery";
+@import "shortcode/404";
+@import "shortcode/coming";

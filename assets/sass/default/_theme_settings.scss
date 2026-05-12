@@ -1,0 +1,87 @@
+
+/*--------------------------------------------------------------
+  03. Common Settings
+----------------------------------------------------------------*/
+
+:root {
+--theme-transition: all 0.4s ease;
+
+
+--header-height: 100px;
+--offcanvas-toggle-bg: #f8f8f8;
+--offcanvas-toggle-Padding: 30px;
+--offcanvas-toggle-color: #010101;
+
+--button-background-color: #FF4A37;
+--button-text-color: #ffffff;
+--button-padding: 16px 32px;
+--button-gap: 10px;
+--button-border-radious: 0px;
+--button-border: 0px;
+
+--social-icon-gap: 5px;
+--social-icon-padding: 12px 15px 10px 15px;
+--social-icon-color: #010101;
+--social-icon-bg-color: #f8f8f8;
+--social-icon-bg-hover-color: #FF4A37;
+--social-icon-color: #010101;
+--social-icon-hover-color: #ffffff;
+
+--social-darktheme-icon-bg-color: #373747;
+}
+
+
+.theme-social{
+  ul{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: row;
+    gap: var(--social-icon-gap);
+    li{
+      list-style: none;
+      a{
+        background-color: var(--social-icon-bg-color);
+        color: var(--social-icon-color);
+        padding: var(--social-icon-padding);
+        display: inline-block;
+        transition: var(--theme-transition);
+        &:hover{
+          background: var(--social-icon-bg-hover-color);
+          color: var(--social-icon-hover-color);
+        }
+      }
+    }
+  }
+}
+
+button{
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: var(--theme-transition);
+  font-size: var(--button-font-size);
+  padding: var(--button-padding);
+  gap: var(--button-gap);
+  border-radius: var(--button-border-radious);
+  border: var(--button-border);
+  i{
+    line-height: 0px;
+  }
+}
+
+
+.theme-dark .theme-social{
+    ul{
+      li{
+        a{
+          background-color: var(--social-darktheme-icon-bg-color);
+          color: var(--social-darktheme-icon-color);
+          &:hover{
+            background: var(--social-icon-bg-hover-color);
+            color: var(--social-icon-hover-color);
+          }
+        }
+      }
+    }
+  }

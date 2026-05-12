@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+  21. Testimonial
+----------------------------------------------------------------*/
+.testi-slider-item-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .testi-user {
+    min-width: 150px;
+    img {
+      margin-bottom: 20px;
+    }
+  }
+  .testi-content {
+    max-width: 950px;
+  }
+}
+.testi-wrapper {
+  position: relative;
+  .testi-pagi-wrap {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    bottom: 50%;
+    .swiper-pagination-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .swiper-pagination-bullet {
+        background: var(--themecolor);
+        opacity: 0.2;
+      }
+      .swiper-pagination-bullet-active {
+        background: var(--themecolor);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.for-quote-mark {
+  position: relative;
+  .testi-quote-mark {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .testi-slider-item-wrap {
+    gap: 15px;
+    .testi-border {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .testi-slider-item-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 576px) {
+  .testi-slider-item-wrap {
+    margin: 0px 10px;
+  }
+}

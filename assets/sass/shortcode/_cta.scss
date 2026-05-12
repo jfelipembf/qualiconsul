@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+  20. CTA
+----------------------------------------------------------------*/
+.cs-cta-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cta-wrap{
+  background-attachment: fixed;
+}
+.cs-cta-wrap{
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 991px) {
+  .cs-cta-content{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+}
+
+  
