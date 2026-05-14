@@ -1,4 +1,4 @@
-git log --oneline --all -- projects.html<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js" lang="pt-BR">
 
 <head>
@@ -10,13 +10,62 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
   <!-- Favicon Icon -->
   <link rel="icon" href="assets/img/iconQuali.png" />
   <!-- Site Title -->
-  <title>Constr - Construction & Building</title>
+  <title>Qualiconsul — Portfólio de Projetos Industriais</title>
   <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
   <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css" />
   <link rel="stylesheet" href="assets/css/plugins/aos.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* Item de menu ativo (sem link) — alinhado ao nav desktop */
+    @media screen and (min-width: 1200px) {
+      .cs_site_header .cs_nav .cs_nav_list > li.active > .active-page {
+        padding: 10px 0;
+        display: inline-flex;
+        align-items: center;
+        height: inherit;
+        position: relative;
+        font-weight: 600;
+        cursor: default;
+        pointer-events: none;
+        opacity: 1;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+      }
+      .cs_site_header .cs_nav .cs_nav_list > li.active > .active-page span {
+        color: inherit;
+      }
+    }
+    @media screen and (max-width: 1199px) {
+      .cs_site_header .cs_nav .cs_nav_list > li.active > .active-page {
+        font-weight: 600;
+        opacity: 1;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+    /* Grade de projetos — proporção uniforme e imagens alinhadas */
+    .projects-list .project-item .project-item-in {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+    .projects-list .project-item .project-item-in > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      line-height: 0;
+    }
+    .projects-list .project-item .project-item-in img {
+      width: 100% !important;
+      height: 100% !important;
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+  </style>
 </head>
 
 <body>
@@ -40,7 +89,7 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
     <!-- End Preloader -->
 
   <!-- Start Header Section -->
-  <header class="cs_site_header cs-header-with-bg cs_style1 cs_sticky_header">
+  <header class="cs_site_header cs-header-with-bg cs_style1 cs_sticky_header themecolor-bg theme-dark">
 
     <!-- Start Main Header Area -->
     <div class="cs_main_header">
@@ -50,7 +99,7 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
         <div class="cs_main_header_left">
           <div class="cs-constr-header-logo">
             <a class="cs_site_branding" href="index.html">
-              <img src="assets/img/logo_main.png" alt="Logo" />
+              <img src="assets/img/LogoQualiConsul.png" alt="Qualiconsul Logo" />
             </a>
           </div>
         </div>
@@ -63,11 +112,19 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
               <li>
                 <a href="index.html" class="cs-text_b_line"><span>INÍCIO</span></a>
               </li>
+
               <li>
                 <a href="about.html" class="cs-text_b_line"><span>SOBRE NÓS</span></a>
               </li>
+
               <li>
                 <a href="service.html" class="cs-text_b_line"><span>SERVIÇOS</span></a>
+              </li>
+
+              <li class="active">
+                <span class="cs-text_b_line active-page">
+                  <span>PROJETOS</span>
+                </span>
               </li>
             </ul>
           </div>
@@ -75,18 +132,9 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
         <!-- End Main Header Middle Area -->
 
         <!-- Start Main Header Right Area -->
-        <div class="cs_main_header_right themecolor-bg">
+        <div class="cs_main_header_right" style="background-color: #2c3e50;">
 
-          <div class="cs_toolbox">
-            <span class="cs_icon_btn">
-              <span class="cs_icon_btn_in">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </span>
-          </div>
+
 
           <div class="header-contact">
             <div class="cs-header-phone theme-dark header-contact-box">
@@ -94,7 +142,7 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               </div>
               <div class="header-contact-text">
-                <span>Ligue!:</span>
+                <span>Ligue agora!:</span>
                 <a href="tel:+552130900423" class="cs-text_b_line"><span>(21) 3090-0423</span></a>
               </div>
             </div>
@@ -120,97 +168,7 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
   </header>
   <!-- End Header Section -->
 
-
-  <!-- Start Sidebar -->
-  <div class="cs_side_header">
-
-    <button class="cs_close"></button>
-
-    <div class="cs_side_header_overlay"></div>
-    <div class="cs_side_header_in">
-      <div class="cs-sidebar-about-brand">
-        <a class="cs_site_branding" href="index.html">
-          <img src="assets/img/logo_main.png" alt="Logo" />
-        </a>
-        <div class="cs-height-20"></div>
-        <p>
-          Acreditamos que a construção é mais do que erguer estruturas.
-        </p>
-        <div class="cs-height-35"></div>
-        <img src="assets/img/header-sidebar/header-sidebar.jpg" alt="">
-      </div>
-
-      <div class="cs-height-150"></div>
-      <div class="cs-sidebar-middle-area">
-        <p>Diga olá!</p>
-        <a href="tel:+14065550120"><h6>(21) 3090-0423</h6></a>
-        <div class="cs-height-20"></div>
-        <p>Diga olá!</p>
-        <a href="mailto:qualiconsul@qualiconsul.com.br"><h6>qualiconsul@qualiconsul.com.br</h6></a>
-        <div class="cs-height-20"></div>
-                <p>Endereço:</p>
-        <span class="cs-text-style-h6">Av. União, 917 - Mesquita - RJ</span>
-
-        <div class="cs-height-30"></div>
-
-        <div class="theme-social">
-          <ul>
-            <li>
-              <a href="https://www.facebook.com" target="_blank">
-                <i class="flaticon-facebook-app-symbol"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com" target="_blank">
-                <i class="flaticon-linkedin-big-logo"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com" target="_blank">
-                <i class="flaticon-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com" target="_blank">
-                <i class="flaticon-instagram"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- End Sidebar -->
-
-  <!-- Start Common BreadCrumb -->
-  <section>
-    <div class="cs-breadcrumb-wrap theme-dark" data-src="assets/img/breadcrumb.jpg">
-      <div class="container">
-        <div class="row cs_center">
-          <div class="cs-bread-page-title-area">
-            <div class="cs-page-title">
-              <h2 class="cs_white_color">Projects</h2>
-            </div>
-            <div class="breadcrumb">
-              <ul>
-                <li>
-                  <a href="index.html" class="cs-text_b_line"><span>INÍCIO</span></a>
-                </li>
-                <li>/</li>
-                <li>PROJECTS</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Common BreadCrumb -->
-
-  <div class="cs-section-height"></div>
-  <!-- Section to Section Gap -->
+  <div class="cs-height-80"></div>
 
   <!-- Start Projects Section-->
   <section class="projects-list">
@@ -219,16 +177,16 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
         <div class="col-xl-6 col-md-12">
           <div class="project-item" data-aos="fade-up" data-aos-duration="300">
             <div class="project-item-in">
-              <a href="project-details.html">
-                <img src="assets/img/projects/project-img01.jpg" alt="">
+              <a href="project-details-1.html">
+                <img src="assets/img/projects/image04.jpeg" alt="Obra industrial em execução — Qualiconsul">
               </a>
             </div>
             <div class="project-item-text">
               <div class="tag-item">
-                <a href="#"><span>Construction</span></a>
+                <a href="project-details-1.html"><span>Infraestrutura industrial</span></a>
               </div>
-              <a href="project-details.html"><h5>Greenfield Industrial Park</h5></a>
-              <a href="project-details.html" class="cs-text_b_line"><span>VIEW PROJECT</span>
+              <a href="project-details-1.html"><h5>Construção e concretagem de bases circulares industriais</h5></a>
+              <a href="project-details-1.html" class="cs-text_b_line"><span>VER PROJETO</span>
                 <i class="flaticon-right-arrow"></i>
               </a>
             </div>
@@ -238,16 +196,16 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
         <div class="col-xl-6 col-md-12">
           <div class="project-item" data-aos="fade-up" data-aos-duration="500">
             <div class="project-item-in">
-              <a href="project-details.html">
-                <img src="assets/img/projects/project-img02.jpg" alt="">
+              <a href="project-details-2.html">
+                <img src="assets/img/projects/image02.jpeg" alt="Montagem estrutural em planta industrial">
               </a>
             </div>
             <div class="project-item-text">
               <div class="tag-item">
-                <a href="#"><span>Construction</span></a>
+                <a href="project-details-2.html"><span>Montagem industrial</span></a>
               </div>
-              <a href="project-details.html"><h5>Greenfield Industrial Park</h5></a>
-              <a href="project-details.html" class="cs-text_b_line"><span>VIEW PROJECT</span>
+              <a href="project-details-2.html"><h5>Estruturas metálicas e tanques de processo</h5></a>
+              <a href="project-details-2.html" class="cs-text_b_line"><span>VER PROJETO</span>
                 <i class="flaticon-right-arrow"></i>
               </a>
             </div>
@@ -257,16 +215,16 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
         <div class="col-xl-6 col-md-12">
           <div class="project-item" data-aos="fade-up" data-aos-duration="700">
             <div class="project-item-in">
-              <a href="project-details.html">
-                <img src="assets/img/projects/project-img03.jpg" alt="">
+              <a href="project-details-3.html">
+                <img src="assets/img/projects/image03.jpeg" alt="Equipe técnica em adequação normativa">
               </a>
             </div>
             <div class="project-item-text">
               <div class="tag-item">
-                <a href="#"><span>Construction</span></a>
+                <a href="project-details-3.html"><span>Manutenção industrial </span></a>
               </div>
-              <a href="project-details.html"><h5>Greenfield Industrial Park</h5></a>
-              <a href="project-details.html" class="cs-text_b_line"><span>VIEW PROJECT</span>
+              <a href="project-details-3.html"><h5>Manutenção e confiabilidade</h5></a>
+              <a href="project-details-3.html" class="cs-text_b_line"><span>VER PROJETO</span>
                 <i class="flaticon-right-arrow"></i>
               </a>
             </div>
@@ -276,16 +234,16 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
         <div class="col-xl-6 col-md-12">
           <div class="project-item" data-aos="fade-up" data-aos-duration="900">
             <div class="project-item-in">
-              <a href="project-details.html">
-                <img src="assets/img/projects/project-img04.jpg" alt="">
+              <a href="project-details-4.html">
+                <img src="assets/img/projects/image05.5.jpeg" alt="Instalações elétricas industriais">
               </a>
             </div>
             <div class="project-item-text">
               <div class="tag-item">
-                <a href="#"><span>Construction</span></a>
+                <a href="project-details-4.html"><span>Infraestrutura Industrial</span></a>
               </div>
-              <a href="project-details.html"><h5>Greenfield Industrial Park</h5></a>
-              <a href="project-details.html" class="cs-text_b_line"><span>VIEW PROJECT</span>
+              <a href="project-details-4.html"><h5>Infraestrutura Civil Industrial</h5></a>
+              <a href="project-details-4.html" class="cs-text_b_line"><span>VER PROJETO</span>
                 <i class="flaticon-right-arrow"></i>
               </a>
             </div>
@@ -293,54 +251,14 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
           <div class="cs-height-30"></div>
         </div>
         <div class="col-xl-6 col-md-12">
-          <div class="project-item" data-aos="fade-up" data-aos-duration="1100">
-            <div class="project-item-in">
-              <a href="project-details.html">
-                <img src="assets/img/projects/project-img05.jpg" alt="">
-              </a>
-            </div>
-            <div class="project-item-text">
-              <div class="tag-item">
-                <a href="#"><span>Construction</span></a>
-              </div>
-              <a href="project-details.html"><h5>Greenfield Industrial Park</h5></a>
-              <a href="project-details.html" class="cs-text_b_line"><span>VIEW PROJECT</span>
-                <i class="flaticon-right-arrow"></i>
-              </a>
-            </div>
-          </div>
-          <div class="cs-height-30"></div>
-        </div>
-        <div class="col-xl-6 col-md-12">
-          <div class="project-item" data-aos="fade-up" data-aos-duration="1300">
-            <div class="project-item-in">
-              <a href="project-details.html">
-                <img src="assets/img/projects/project-img06.jpg" alt="">
-              </a>
-            </div>
-            <div class="project-item-text">
-              <div class="tag-item">
-                <a href="#">
-                  <span>Construction</span>
-                </a>
-              </div>
-              <a href="project-details.html">
-                <h5>Greenfield Industrial Park</h5>
-              </a>
-              <a href="project-details.html" class="cs-text_b_line">
-                <span>VIEW PROJECT</span>
-                <i class="flaticon-right-arrow"></i>
-              </a>
-            </div>
-          </div>          
-          <div class="cs-height-30"></div>
-        </div>
+     
+
       </div>
     </div>
   </section>
   <!-- End Projects Section-->
 
-  <div class="cs-section-height"></div>
+  
   <!-- Section to Section Gap -->
 
   <section>
@@ -351,16 +269,13 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
 
             <div class="cta-content max-width-800 m-auto">
               <div class="cs-height-100"></div>
-              <h2 data-aos="fade-up" data-aos-duration="400">Start Your <span class="themecolor" data-aos="fade-up" data-aos-duration="1000">Construction</span> Journey with Us Today!</h2>
+              <h2 data-aos="fade-up" data-aos-duration="400">Excelência em <span class="themecolor" data-aos="fade-up" data-aos-duration="1000">montagens industriais</span> com rigor técnico e conformidade</h2>
               
               <div class="cs-height-15"></div>
   
-              <p>From concept to completion, we deliver exceptional construction services tailored to your needs. Contact us now for a free consultation!</p>
+              <p>Cada entrega é conduzida sob critérios de inspeção de qualidade, rastreabilidade de processos e disciplina operacional, assegurando precisão na execução, aderência a normas aplicáveis e confiabilidade em ambientes de alta criticidade. Unimos engenharia, supervisão técnica e governança de campo para transformar escopo em resultado industrial mensurável, com segurança, previsibilidade e excelência na conclusão dos projetos.</p>
               <div class="cs-height-25"></div>
 
-              <a href="https://wa.me/5521995434084?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" class="cs-text_b_line" target="_blank" rel="noopener noreferrer"><span>Fale Conosco</span>
-                <i class="flaticon-right-arrow"></i>
-              </a>
             </div>
 
             <div class="cs-height-100"></div>
@@ -414,9 +329,9 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
             <div class="col-xl-4 col-lg-6 col-md-8 cs-lg-bootm-p30">
               <div class="cs-footer-widget">
                 <div>
-                  <a href="index.html"><img src="assets/img/logo_main.png" alt=""></a>
+                  <a href="index.html"><img src="assets/img/iconQuali.png" alt="Qualiconsul Logo" style="max-width: 200px;"></a>
                   <div class="cs-height-20"></div>
-                  <p>Acreditamos que a construção é mais do que erguer estruturas; é sobre criar o futuro.</p>
+                  <p>Acreditamos que a construção vai além de erguer estruturas; é sobre criar o futuro.</p>
                 </div>
                 <div class="cs-height-30"></div>
                 <div class="cs-footer-widget-title">
@@ -471,11 +386,19 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
                     <li><i class="flaticon-right-arrow themecolor"></i><a href="service.html"
                         class="cs-text_b_line"><span>NOSSOS SERVIÇOS</span></a></li>
                     <li><i class="flaticon-right-arrow themecolor"></i><a href="projects.html"
-                        class="cs-text_b_line"><span>RECENT PORTFOLIO</span></a></li>
+                        class="cs-text_b_line"><span>PORTFÓLIO RECENTE</span></a></li>
                     <li><i class="flaticon-right-arrow themecolor"></i> <a href="blog.html"
-                        class="cs-text_b_line"><span>NEWS & INSIGHTS</span></a></li>
-                    <li><i class="flaticon-right-arrow themecolor"></i><a href="contact.html"
-                        class="cs-text_b_line"><span>CONTATO</span></a></li>
+                        class="cs-text_b_line"><span>NOTÍCIAS & INSIGHTS</span></a></li>
+                    <li>
+                      <i class="flaticon-right-arrow themecolor"></i>
+                      <a href="https://wa.me/552130900423?text=Olá,%20tudo%20bem?%20Tenho%20interesse%20nos%20serviços%20da%20Qualiconsul"
+                        class="cs-text_b_line"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <span>CONTATE-NOS</span>
+                      </a>
+                    </li>
+
                   </ul>
                 </div>
               </div>
@@ -488,15 +411,15 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
                 </div>
                 <div class="cs-constr-footer-menu">
                   <ul>
-                    <li><i class="flaticon-right-arrow themecolor"></i><a href="service-details.html"
-                        class="cs-text_b_line"><span>COMMERCIAL</span></a></li>
-                    <li><i class="flaticon-right-arrow themecolor"></i><a href="service-details.html"
-                        class="cs-text_b_line"><span>CONSULTING</span></a></li>
-                    <li><i class="flaticon-right-arrow themecolor"></i><a href="service-details.html"
-                        class="cs-text_b_line"><span>RENOVATIONS</span></a></li>
-                    <li><i class="flaticon-right-arrow themecolor"></i><a href="service-details.html"
-                        class="cs-text_b_line"><span>RESIDENTIAL</span></a></li>
-                    <li><i class="flaticon-right-arrow themecolor"></i> <a href="service-details.html"
+                    <li><i class="flaticon-right-arrow themecolor"></i><a href="service.html"
+                        class="cs-text_b_line"><span>ELÉTRICA</span></a></li>
+                    <li><i class="flaticon-right-arrow themecolor"></i><a href="service.html"
+                        class="cs-text_b_line"><span>CONSULTORIA</span></a></li>
+                    <li><i class="flaticon-right-arrow themecolor"></i><a href="service.html"
+                        class="cs-text_b_line"><span>MONTAGEM</span></a></li>
+                    <li><i class="flaticon-right-arrow themecolor"></i><a href="service.html"
+                        class="cs-text_b_line"><span>REFORMAS</span></a></li>
+                    <li><i class="flaticon-right-arrow themecolor"></i> <a href="service.html"
                         class="cs-text_b_line"><span>INDUSTRIAL</span></a></li>
                   </ul>
                 </div>
@@ -505,14 +428,14 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
             <div class="col-xl-3 col-lg-7 col-md-6">
               <div class="cs-footer-widget">
                 <p>Diga olá!</p>
-                <a href="tel:+14065550120" class="cs-text-style-h4">(21) 3090-0423</a>
+                <a href="tel:+552130900423" class="cs-text-style-h4">(21) 3090-0423</a>
                 <div class="cs-height-30"></div>
-                <p>Diga olá!</p>
+                <p>E-mail:</p>
                 <a href="mailto:qualiconsul@qualiconsul.com.br" class="cs-text-style-h4">qualiconsul@qualiconsul.com.br</a>
                 <div class="cs-height-30"></div>
                 <p>Endereço:</p>
                 <div class="cs-height-5"></div>
-                <span class="cs-font-size-20">901 N Pitt Str., Suite 170 Alexandria, USA</span>
+                <span class="cs-font-size-20">Av. União, 917 - Mesquita - RJ</span>
               </div>
             </div>
           </div>
@@ -523,7 +446,7 @@ git log --oneline --all -- projects.html<!DOCTYPE html>
 
       <div class="cs-theme-copyright">
         <div class="cs-footer-copy-text">
-          <p>© 2025 <a href="#" class="themecolor">Thememarch.</a> Todos os direitos reservados.</p>
+          <p>© 2025 <a href="#" class="themecolor">Qualiconsul.</a> Todos os direitos reservados.</p>
         </div>
       </div>
 

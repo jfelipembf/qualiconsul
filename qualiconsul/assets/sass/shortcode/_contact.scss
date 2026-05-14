@@ -1,0 +1,101 @@
+/*--------------------------------------------------------------
+29. Contact 
+----------------------------------------------------------------*/
+.contact-img{
+  max-width: 825px;
+  max-height: 800px;
+}
+
+.cs-contact-map-and-form{
+  .container-fluid{
+    padding-right: calc((100% - 1320px) / 2);
+  }
+  .col-xl-7{
+    padding: 0px;
+    margin: 0px;
+  }
+}
+.cs-contact-form-wrap{
+  .cs-heading{
+    font-weight: 600;
+  }
+}
+.cs-office-box{
+  padding: 50px 50px;
+  margin-bottom: 30px;
+}
+.cs-cp-office-location .col-xl-4{
+  padding: 0px 15px;
+}
+
+.cs-contact-map-and-form{
+  iframe{
+    width: 825px;
+    height: 800px;
+    margin-bottom: -9px;
+  }
+}
+
+.cs-contact-section{
+  .container-fluid{
+    padding-right: calc((100% - 1320px) / 2);
+  }
+  .col-xl-7{
+    padding: 0px;
+  }
+  .cs-heading{
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .cs-contact-map-and-form{
+    iframe{
+      width: 700px;
+    }
+  }
+}
+@media screen and (max-width: 1199px) {
+  .cs-contact-map-and-form{
+    iframe{
+      width: 450px;
+    }
+  }
+  .cs-contact-section{
+    max-width: 960px;
+    margin: auto;
+    .contact-img{
+      margin-bottom: 50px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cs-contact-section{
+    .cs-section-height{
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .cs-contact-map-and-form{
+    iframe{
+      width: 100vw;
+      height: 70vh;
+    }
+  }
+  .cs-contact-map-and-form .cs-contact-form-wrap{
+    margin-top: 50px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cs-cp-office-location{
+    margin: 0px 10px;
+  }
+}
+
+
+ 
+
+

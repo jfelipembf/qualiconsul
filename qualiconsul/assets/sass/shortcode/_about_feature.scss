@@ -1,0 +1,118 @@
+/*--------------------------------------------------------------
+  24. About Feature
+----------------------------------------------------------------*/
+.cs-com-strength{
+  position: relative;
+  .com-strength-img{
+    position: absolute;
+    bottom: 0px;
+  }
+  .list-feature{
+    .cs-list-border{
+      height: 1px;
+      width: 100%;
+      margin: 18px 0px;
+      border: 1px solid var(--theme_dark_border);
+    }
+  }
+}
+.cs-video-area{
+  .cs-video{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .cs_video_block{
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.cs-video-btn{
+  position: absolute;
+  bottom: 38%;
+  top: 38%;
+  background: var(--theme_white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80px;
+  max-height: 80px;
+  a{
+    padding: 30px
+  }
+  
+}
+
+.cs-feature-card-wrap{
+  .feature-card-item{
+    transition: var(--theme-transition);
+    padding: 70px 40px;
+    .cs-feature-icon{
+      margin-bottom: 25px;
+    }
+    .b-top-left,
+    .b-top-right,
+    .b-bottom-right,
+    .b-bottom-left{
+      opacity: 0;
+    }
+    h5{
+      margin-bottom: 10px;
+    }
+    &:hover{
+      transition: var(--theme-transition);
+      box-shadow: rgba(200, 200, 200, 0.4) 5px 5px, 
+      rgba(200, 200, 200, 30%) 10px 10px, 
+      rgba(200, 200, 200, 25%) 15px 15px, 
+      rgba(200, 200, 200, 20%) 20px 20px, 
+      rgba(200, 200, 200, 15%) 25px 25px;
+      transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      .b-top-left,
+      .b-top-right,
+      .b-bottom-right,
+      .b-bottom-left{
+        opacity: 0.5;
+      }
+    }
+  }
+
+}
+@media screen and (max-width: 1490px) {
+  .com-strength-img{
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .com-strength-img{
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .cs-video-area .cs-video{
+    margin-top: 50px;
+    img{
+      width: 100%;
+    }
+  }
+  .cs-video-area .list-feature{
+    margin-bottom: 40px;
+  }
+  .com-strength-img{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .cs-com-strength{
+    .cs-couple-btn{
+      a.themecolor-bg{
+        display: none;
+      }
+    }
+  }
+}
+

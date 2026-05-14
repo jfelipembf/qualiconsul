@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------
+  31. Gallery
+----------------------------------------------------------------*/
+.lg-custom-thumbnails {
+    background-color: var(--theme_black);
+    #lg-counter {
+        color: var(--theme_white);
+        &:hover{
+            color: var(--themecolor);
+          }
+    }
+    .lg-icon {
+      background-color: transparent;
+      border: none;
+      color: var(--theme_white);
+      &:hover{
+        color: var(--themecolor);
+      }
+    }
+  }
+  
+  .gallery {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-auto-rows: minmax(350px, 200px);
+    grid-auto-flow: dense;
+  
+    .item {
+      overflow: hidden;
+      position: relative;
+    }
+    .frame {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      top: 100%;
+      transition: all 0.5s ease;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      transition-delay: 0.1s;
+      i{
+        font-size: 32px;
+        color: var(--theme_white);
+      }
+    }
+    .frame span {
+      width: 26px;
+      height: 26px;
+    }
+    .item:hover .frame {
+      top: 0;
+      i{
+        color: var(--themecolor);
+      }
+    }
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 1s;
+      transition-delay: 0.2s;
+    }
+    .item:hover img {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    .gallery-vertical {
+      grid-column: span 2;
+    }
+    .gallery-horizontal {
+      grid-row: span 2;
+    }
+    .big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+  

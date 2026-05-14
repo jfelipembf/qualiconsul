@@ -1,0 +1,284 @@
+/*--------------------------------------------------------------
+  02. Colors & Variables
+----------------------------------------------------------------*/
+
+$themecolor: #31c5ff;
+$themeblack: #2c3e50;
+
+:root {
+  --themecolor: #31c5ff;
+  --themecolor_secondary: #1a9cd1;
+  --theme_black: #2c3e50;
+  --theme_white: #ffffff;
+
+  --themecolor_bg: #31c5ff;
+  --third_bg: #1a9cd1;
+  --theme_bg_primary: #F8F8F8;
+  --theme_bg_secondary: #101010;
+  --theme_bg_dark: #2c3e50;
+
+  --main-header-border-color: #ECECEC;
+
+  --theme_dark_border: #373747;
+  --theme_light_border: #ECECEC;
+
+  --theme_light_heading_text: #101010;
+  --theme_dark_heading_text: #101010;
+  --theme_light_body_text: #373747;
+  --theme_dark_body_text: #C1C1C1;
+
+  --theme-light-heading-1-font-color: #2c3e50;
+  --theme-light-heading-2-font-color: #2c3e50;
+  --theme-light-heading-3-font-color: #2c3e50;
+  --theme-light-heading-4-font-color: #2c3e50;
+  --theme-light-heading-5-font-color: #2c3e50;
+  --theme-light-heading-6-font-color: #2c3e50;
+  --theme-light-paragraph-font-color: #373747;
+  --theme-light-main-nav-font-color: #373747;
+  --theme-light-span-font-color: #373747;
+  --theme-light-i-font-color: #373747;
+  --theme-light-body-font-color: #373747;
+  --theme-light-link-text-font-color: #373747;
+  --theme-light-button-font-color: #373747;
+  --theme-light-blockquote-font-color: #373747;
+  --theme-light-li-font-color: #373747;
+
+  --theme-dark-heading-1-font-color: #FFFFFF;
+  --theme-dark-heading-2-font-color: #FFFFFF;
+  --theme-dark-heading-3-font-color: #FFFFFF;
+  --theme-dark-heading-4-font-color: #FFFFFF;
+  --theme-dark-heading-5-font-color: #FFFFFF;
+  --theme-dark-heading-6-font-color: #FFFFFF;
+  --theme-dark-paragraph-font-color: #FFFFFF;
+  --theme-dark-main-nav-font-color: #FFFFFF;
+  --theme-dark-span-font-color: #FFFFFF;
+  --theme-dark-i-font-color: #FFFFFF;
+  --theme-dark-body-font-color: #FFFFFF;
+  --theme-dark-link-text-font-color: #FFFFFF;
+  --theme-dark-button-font-color: #FFFFFF;
+  --theme-dark-blockquote-font-color: #FFFFFF;
+  --theme-dark-li-font-color: #FFFFFF;
+}
+
+.themecolor-bg {
+  background: var(--themecolor_bg);
+}
+
+.secondary-bg {
+  background: var(--themecolor_secondary);
+}
+
+.third-bg {
+  background: var(--third_bg);
+}
+
+.hover-third-bg:hover {
+  background: var(--third_bg);
+  transition: var(--theme-transition);
+}
+
+.hover-theme-black-bg:hover {
+  background-color: var(--theme_black);
+  transition: var(--theme-transition);
+}
+
+.hover-theme-white-bg:hover {
+  background-color: var(--theme_white);
+  transition: var(--theme-transition);
+}
+
+.hover-theme-gray-bg:hover {
+  background-color: var(--theme_bg_primary);
+  transition: var(--theme-transition);
+}
+
+.themecolor-bg-primary,
+.theme_bg_primary {
+  background: var(--theme_bg_primary);
+  background-color: var(--theme_bg_primary);
+}
+
+.theme-black-bg {
+  background: var(--theme_black);
+}
+
+.themecolor {
+  color: var(--themecolor);
+}
+
+.body-text-color {
+  color: var(--theme-light-body-font-color);
+}
+
+.theme-dark .cs-primary-btn.themecolor-bg span {
+  color: var(--theme_white);
+}
+
+.theme-dark .themecolor {
+  color: var(--themecolor);
+  ;
+}
+
+.theme-dark .cs-primary-btn span {
+  color: var(--theme_black);
+  transition: var(--theme-transition);
+}
+
+.cs_white_color,
+.cs-color-white,
+.cs_white_color_hover:hover {
+  color: var(--theme_white);
+}
+
+.cs_white_color-bg,
+.cs-color-white-bg {
+  background-color: var(--theme_white);
+}
+
+.cs_black_color,
+.cs-color-black {
+  color: var(--theme_black);
+}
+
+.cs-color-black {
+  color: var(--theme_bg_dark);
+}
+
+.cs-bg-black {
+  background-color: var(--theme_bg_dark);
+}
+
+.cs-color-body {
+  color: var(--body-color)
+}
+
+.cs_ternary_color {
+  color: var(--theme_light_border);
+}
+
+.cs_accent_color,
+.cs_accent_color_hover:hover {
+  color: var(--themecolor);
+}
+
+.cs_white_bg {
+  background-color: #fff;
+}
+
+.cs_gray_bg {
+  background-color: var(--theme_bg_primary);
+}
+
+.cs_gray_bg_20 {
+  background: rgba(217, 217, 217, 0.2);
+}
+
+.cs_accent_bg_1,
+.cs_accent_bg_1_hover:hover {
+  background-color: rgba($themecolor, 0.01);
+}
+
+.cs_accent_bg_2,
+.cs_accent_bg_2_hover:hover {
+  background-color: rgba($themecolor, 0.02);
+}
+
+.cs_accent_bg_3,
+.cs_accent_bg_3_hover:hover {
+  background-color: rgba($themecolor, 0.03);
+}
+
+.cs_accent_bg_4,
+.cs_accent_bg_4_hover:hover {
+  background-color: rgba($themecolor, 0.04);
+}
+
+.cs_accent_bg_5,
+.cs_accent_bg_5_hover:hover {
+  background-color: rgba($themecolor, 0.05);
+}
+
+.cs_accent_bg_6,
+.cs_accent_bg_6_hover:hover {
+  background-color: rgba($themecolor, 0.06);
+}
+
+.cs_accent_bg_7,
+.cs_accent_bg_7_hover:hover {
+  background-color: rgba($themecolor, 0.07);
+}
+
+.cs_accent_bg_8,
+.cs_accent_bg_8_hover:hover {
+  background-color: rgba($themecolor, 0.08);
+}
+
+.cs_accent_bg_9,
+.cs_accent_bg_9_hover:hover {
+  background-color: rgba($themecolor, 0.09);
+}
+
+.cs_accent_bg_10,
+.cs_accent_bg_10_hover:hover {
+  background-color: rgba($themecolor, 0.1);
+}
+
+.cs_accent_bg_15,
+.cs_accent_bg_15_hover:hover {
+  background-color: rgba($themecolor, 0.15);
+}
+
+.cs_accent_bg_20,
+.cs_accent_bg_20_hover:hover {
+  background-color: rgba($themecolor, 0.2);
+}
+
+.cs_accent_bg_25,
+.cs_accent_bg_25_hover:hover {
+  background-color: rgba($themecolor, 0.25);
+}
+
+.cs_accent_bg_30,
+.cs_accent_bg_30_hover:hover {
+  background-color: rgba($themecolor, 0.3);
+}
+
+.cs_accent_bg_35,
+.cs_accent_bg_35_hover:hover {
+  background-color: rgba($themecolor, 0.35);
+}
+
+.cs_accent_bg_40,
+.cs_accent_bg_40_hover:hover {
+  background-color: rgba($themecolor, 0.4);
+}
+
+.cs_accent_bg_50,
+.cs_accent_bg_50_hover:hover {
+  background-color: rgba($themecolor, 0.5);
+}
+
+.cs_accent_bg_60,
+.cs_accent_bg_60_hover:hover {
+  background-color: rgba($themecolor, 0.6);
+}
+
+.cs_accent_bg_70,
+.cs_accent_bg_70_hover:hover {
+  background-color: rgba($themecolor, 0.7);
+}
+
+.cs_accent_bg_80,
+.cs_accent_bg_80_hover:hover {
+  background-color: rgba($themecolor, 0.8);
+}
+
+.cs_accent_bg_90,
+.cs_accent_bg_90_hover:hover {
+  background-color: rgba($themecolor, 0.9);
+}
+
+.cs_accent_bg,
+.cs_accent_bg_hover:hover {
+  background-color: var(--themecolor);
+}

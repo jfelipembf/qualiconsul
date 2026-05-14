@@ -1,0 +1,56 @@
+/*--------------------------------------------------------------
+  11. Breadcrumb Style
+----------------------------------------------------------------*/
+.cs-breadcrumb-wrap{
+    height: calc(465px - 100px);
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-size: 100% auto;
+    background-position: center center;
+    transition: background-size 0.7s ease-out;
+    h2{
+        font-weight: 500;
+    }
+
+}
+.breadcrumb{
+    display: inline-block;
+    margin: 0px;
+    ul{
+        display: flex;
+        gap: 15px;
+        padding: 0px;
+        margin: 0px;
+        li{
+            list-style: none; 
+        }
+    }
+}
+
+.cs-breadcrumb-classic{
+    height: 150px;
+    margin-top: 100px;
+    .cs-bc-classic-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    .cs-breadcrumb-wrap{
+        height: auto;
+        padding: 100px 0px;
+        background-size: auto;
+    }
+}
+@media screen and (max-width: 991px) {
+    .cs-breadcrumb-wrap{
+        height: auto;
+        padding: 80px 0px;
+    }
+}
