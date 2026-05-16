@@ -16,7 +16,44 @@
   <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
   <link rel="stylesheet" type="text/css" href="assets/fonts/flaticon.css" />
   <link rel="stylesheet" href="assets/css/plugins/aos.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=3" />
+  <style>
+    /* Validação visual — mantém o layout do tema */
+    #whatsappForm .contact-field-col {
+      flex: 1;
+      min-width: 0;
+      width: 100%;
+    }
+    #whatsappForm .input-col-two {
+      align-items: flex-start;
+    }
+    @media screen and (max-width: 991px) {
+      #whatsappForm .input-col-two {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+    #whatsappForm input.is-invalid,
+    #whatsappForm select.is-invalid,
+    #whatsappForm textarea.is-invalid {
+      border-color: #dc3545 !important;
+      box-shadow: 0 0 0 1px rgba(220, 53, 69, 0.12);
+    }
+    #whatsappForm .field-msg {
+      font-size: 0.8125rem;
+      color: #c0392b;
+      margin-top: 6px;
+      line-height: 1.35;
+      min-height: 1.2em;
+    }
+    #whatsappForm .field-msg:empty {
+      display: none;
+    }
+    #whatsappForm textarea {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 
 <body>
@@ -269,33 +306,73 @@
 
           <div class="col-xl-7 col-lg-6 col-md-12">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd"
-              allowfullscreen="">
-            </iframe>
+              title="Mapa — Av. União, 917, Santa Terezinha, Mesquita - RJ"
+              src="https://www.google.com/maps?q=Av.+Uni%C3%A3o,+917+-+Santa+Terezinha,+Mesquita+-+RJ,+26554-000,+Brazil&amp;hl=pt-BR&amp;z=17&amp;output=embed"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
           <div class="col-xl-5 col-lg-6 col-md-12">
             <div class="cs-contact-form-wrap">
-              <div class="position-relative" data-aos="fade-up" data-aos-duration="500">
-                <h2 class="cs-heading">Envie uma mensagem. Use nosso formulário para entrar em contato.</h2>
-                <span class="cs-text-style-h1 cs-animated-text">CONTATO</span>
+              <div class="position-relative" data-aos="fade-up" data-aos-duration="300">
+                <h2 class="cs-heading">Envie-nos uma Mensagem - Use Nosso Formulário</h2>
+                <span class="cs-text-style-h1 cs-animated-text">CONTATE-NOS</span>
               </div>
-              
+
               <div class="cs-height-35"></div>
-              <form id="whatsappForm">
-                  <div class="input-col-two">
-                    <input type="text" id="name" placeholder="Nome Completo*" required>
-                    <input type="text" id="service" placeholder="Serviço de Interesse*" required>
+              <form id="whatsappForm" novalidate>
+                <div class="input-col-two">
+                  <div class="contact-field-col">
+                    <label class="visually-hidden" for="wa_name">Nome completo</label>
+                    <input type="text" id="wa_name" name="nome" autocomplete="name" placeholder="Nome completo*"
+                      required minlength="6" maxlength="120"
+                      title="Informe nome e sobrenome, apenas letras." />
+                    <p class="field-msg" id="wa_name_err" role="alert"></p>
                   </div>
-                  <div class="input-col-two">
-                    <input type="tel" id="phone" placeholder="Telefone*" required>
-                    <input type="email" id="email" placeholder="E-mail*" required>
+                  <div class="contact-field-col">
+                    <label class="visually-hidden" for="wa_service">Serviços de interesse</label>
+                    <select id="wa_service" name="servico" required
+                      style="width: 100%; height: 60px; padding: 0 20px; border: 1px solid #e5e5e5; margin-bottom: 20px; outline: none;">
+                      <option value="" disabled selected>Selecione o serviço*</option>
+                      <option value="Construção Industrial">Construção Industrial</option>
+                      <option value="Montagem Estrutural">Montagem Estrutural</option>
+                      <option value="Manutenção de Caldeiras">Manutenção de Caldeiras</option>
+                      <option value="Gestão de Obras">Gestão de Obras</option>
+                      <option value="Consultoria Técnica">Consultoria Técnica</option>
+                      <option value="Outros">Outros</option>
+                    </select>
+                    <p class="field-msg" id="wa_service_err" role="alert"></p>
                   </div>
-                  <textarea id="message" rows="4" placeholder="Escreva sua mensagem..." required></textarea>
-                  <button type="submit" class="cs-primary-btn secondary-btn cs-color-white themecolor-bg cs-height-60 cs-width-220">
-                    <i class="flaticon-whatsapp" style="margin-right: 8px;"></i>
-                    <span>Enviar WhatsApp</span>
-                  </button>
+                </div>
+                <div class="input-col-two">
+                  <div class="contact-field-col">
+                    <label class="visually-hidden" for="wa_phone">Telefone</label>
+                    <input type="tel" id="wa_phone" name="telefone" autocomplete="tel" inputmode="numeric"
+                      placeholder="Telefone (00) 00000-0000*" required maxlength="15"
+                      title="DDD + número com 10 ou 11 dígitos." />
+                    <p class="field-msg" id="wa_phone_err" role="alert"></p>
+                  </div>
+                  <div class="contact-field-col">
+                    <label class="visually-hidden" for="wa_email">E-mail</label>
+                    <input type="email" id="wa_email" name="email" autocomplete="email" placeholder="Seu e-mail*"
+                      required maxlength="120" inputmode="email" />
+                    <p class="field-msg" id="wa_email_err" role="alert"></p>
+                  </div>
+                </div>
+                <div class="contact-field-col">
+                  <label class="visually-hidden" for="wa_message">Mensagem</label>
+                  <textarea id="wa_message" name="mensagem" rows="4" placeholder="Descreva sua necessidade ou projeto (mín. 20 caracteres)*"
+                    required minlength="20" maxlength="2000"></textarea>
+                  <p class="field-msg" id="wa_message_err" role="alert"></p>
+                </div>
+                <button type="submit"
+                  class="cs-primary-btn secondary-btn cs-color-white themecolor-bg cs-height-60 cs-width-220">
+                  <span class="d-flex align-items-center justify-content-center">
+                    <i class="flaticon-whatsapp" style="margin-right: 10px; font-size: 20px;" aria-hidden="true"></i>
+                    Enviar via WhatsApp
+                  </span>
+                </button>
               </form>
             </div>
           </div>
@@ -445,10 +522,10 @@
             <div class="col-xl-3 col-lg-7 col-md-6">
               <div class="cs-footer-widget">
                 <p>Diga olá!</p>
-                <a href="tel:+552130900423" class="cs-text-style-h4">(21) 3090-0423</a>
+                <a href="tel:+552130900423" class="cs-font-size-20">(21) 3090-0423</a>
                 <div class="cs-height-30"></div>
                 <p>E-mail:</p>
-                <a href="mailto:qualiconsul@qualiconsul.com.br" class="cs-text-style-h4">qualiconsul@qualiconsul.com.br</a>
+                <a href="mailto:qualiconsul@qualiconsul.com.br" class="cs-font-size-20" style="word-break: break-all;">qualiconsul@qualiconsul.com.br</a>
                 <div class="cs-height-30"></div>
                 <p>Onde estamos:</p>
                 <div class="cs-height-5"></div>
@@ -490,23 +567,213 @@
   <script src="assets/js/plugins/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
-    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const name = document.getElementById('name').value;
-      const service = document.getElementById('service').value;
-      const phone = document.getElementById('phone').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-      
-      const whatsappNumber = '552130900423';
-      const text = `Olá, meu nome é *${name}*.\n\n*Serviço de Interesse:* ${service}\n*Telefone:* ${phone}\n*E-mail:* ${email}\n\n*Mensagem:* ${message}`;
-      
-      const encodedText = encodeURIComponent(text);
-      const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedText}`;
-      
-      window.open(whatsappUrl, '_blank');
-    });
+    (function () {
+      var form = document.getElementById('whatsappForm');
+      if (!form) return;
+
+      var waName = document.getElementById('wa_name');
+      var waService = document.getElementById('wa_service');
+      var waPhone = document.getElementById('wa_phone');
+      var waEmail = document.getElementById('wa_email');
+      var waMessage = document.getElementById('wa_message');
+
+      var errName = document.getElementById('wa_name_err');
+      var errService = document.getElementById('wa_service_err');
+      var errPhone = document.getElementById('wa_phone_err');
+      var errEmail = document.getElementById('wa_email_err');
+      var errMessage = document.getElementById('wa_message_err');
+
+      var whatsappNumber = '552130900423';
+
+      function clearErrors() {
+        [waName, waService, waPhone, waEmail, waMessage].forEach(function (el) {
+          el.classList.remove('is-invalid');
+          el.removeAttribute('aria-invalid');
+        });
+        [errName, errService, errPhone, errEmail, errMessage].forEach(function (p) {
+          p.textContent = '';
+        });
+      }
+
+      function setFieldError(el, errEl, msg) {
+        el.classList.add('is-invalid');
+        el.setAttribute('aria-invalid', 'true');
+        errEl.textContent = msg;
+      }
+
+      function nameCharsValid(v) {
+        try {
+          return /^[\p{L}\s'-]+$/u.test(v);
+        } catch (e) {
+          return /^[A-Za-zÀ-ÿ\u00C0-\u024F\s'-]+$/.test(v);
+        }
+      }
+
+      function validateFullName(raw) {
+        var v = (raw || '').trim().replace(/\s+/g, ' ');
+        if (!v) return 'Informe seu nome completo.';
+        if (!nameCharsValid(v))
+          return 'Use apenas letras, espaços, hífen ou apóstrofo.';
+        var parts = v.split(' ').filter(Boolean);
+        if (parts.length < 2) return 'Informe nome e sobrenome (pelo menos duas palavras).';
+        if (v.length < 6) return 'Nome muito curto.';
+        return '';
+      }
+
+      var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+      function validateEmail(raw) {
+        var v = (raw || '').trim();
+        if (!v) return 'Informe um e-mail.';
+        if (!emailRe.test(v)) return 'Digite um e-mail válido (ex.: contato@gmail.com).';
+        return '';
+      }
+
+      function digitsOnly(s) {
+        return (s || '').replace(/\D/g, '');
+      }
+
+      /* Máscara (XX) XXXXX-XXXX ou (XX) XXXX-XXXX */
+      function formatPhoneBR(d) {
+        d = d.slice(0, 11);
+        if (d.length === 0) return '';
+        if (d.length <= 2) return '(' + d;
+        var ddd = d.slice(0, 2);
+        var rest = d.slice(2);
+        if (rest.length <= 4) return '(' + ddd + ') ' + rest;
+        if (d.length <= 10) return '(' + ddd + ') ' + rest.slice(0, 4) + '-' + rest.slice(4, 8);
+        return '(' + ddd + ') ' + rest.slice(0, 5) + '-' + rest.slice(5, 9);
+      }
+
+      function validatePhoneMasked(masked) {
+        var d = digitsOnly(masked);
+        if (d.length < 10) return 'Informe DDD + número (10 ou 11 dígitos).';
+        if (d.length > 11) return 'Telefone inválido.';
+        var ddd = parseInt(d.slice(0, 2), 10);
+        if (ddd < 11 || ddd > 99) return 'DDD inválido.';
+        return '';
+      }
+
+      var genericMsg = /^(teste|oi|ok|a+o*|ola+|olá+|mensagem|asd+|lorem|123+|abc|asdf|qwert|\.+)$/i;
+
+      function validateMessage(raw) {
+        var v = (raw || '').trim();
+        if (v.length < 20) return 'A mensagem deve ter pelo menos 20 caracteres.';
+        if (genericMsg.test(v)) return 'Escreva uma mensagem mais específica sobre sua necessidade.';
+        if (/^(.)\1{18,}$/.test(v)) return 'Evite repetições de um único caractere.';
+        return '';
+      }
+
+      function validateService() {
+        var v = waService.value;
+        if (!v) return 'Selecione um serviço de interesse.';
+        return '';
+      }
+
+      waPhone.addEventListener('input', function () {
+        var d = digitsOnly(waPhone.value);
+        waPhone.value = formatPhoneBR(d);
+      });
+
+      waPhone.addEventListener('blur', function () {
+        errPhone.textContent = validatePhoneMasked(waPhone.value);
+        if (errPhone.textContent) setFieldError(waPhone, errPhone, errPhone.textContent);
+        else {
+          waPhone.classList.remove('is-invalid');
+          waPhone.removeAttribute('aria-invalid');
+          errPhone.textContent = '';
+        }
+      });
+
+      waName.addEventListener('blur', function () {
+        var msg = validateFullName(waName.value);
+        errName.textContent = msg;
+        if (msg) setFieldError(waName, errName, msg);
+        else {
+          waName.classList.remove('is-invalid');
+          waName.removeAttribute('aria-invalid');
+          errName.textContent = '';
+        }
+      });
+
+      waEmail.addEventListener('blur', function () {
+        var msg = validateEmail(waEmail.value);
+        errEmail.textContent = msg;
+        if (msg) setFieldError(waEmail, errEmail, msg);
+        else {
+          waEmail.classList.remove('is-invalid');
+          waEmail.removeAttribute('aria-invalid');
+          errEmail.textContent = '';
+        }
+      });
+
+      waMessage.addEventListener('blur', function () {
+        var msg = validateMessage(waMessage.value);
+        errMessage.textContent = msg;
+        if (msg) setFieldError(waMessage, errMessage, msg);
+        else {
+          waMessage.classList.remove('is-invalid');
+          waMessage.removeAttribute('aria-invalid');
+          errMessage.textContent = '';
+        }
+      });
+
+      waService.addEventListener('change', function () {
+        errService.textContent = '';
+        waService.classList.remove('is-invalid');
+        waService.removeAttribute('aria-invalid');
+      });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearErrors();
+
+        var order = [
+          { el: waName, err: errName, msg: function () { return validateFullName(waName.value); } },
+          { el: waService, err: errService, msg: validateService },
+          { el: waPhone, err: errPhone, msg: function () { return validatePhoneMasked(waPhone.value); } },
+          { el: waEmail, err: errEmail, msg: function () { return validateEmail(waEmail.value); } },
+          { el: waMessage, err: errMessage, msg: function () { return validateMessage(waMessage.value); } }
+        ];
+
+        var firstInvalid = null;
+        for (var i = 0; i < order.length; i++) {
+          var m = typeof order[i].msg === 'function' ? order[i].msg() : order[i].msg;
+          if (m) {
+            setFieldError(order[i].el, order[i].err, m);
+            if (!firstInvalid) firstInvalid = order[i].el;
+          }
+        }
+
+        if (firstInvalid) {
+          firstInvalid.focus();
+          return;
+        }
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        var name = waName.value.trim().replace(/\s+/g, ' ');
+        var service = waService.value;
+        var phone = waPhone.value.trim();
+        var email = waEmail.value.trim();
+        var message = waMessage.value.trim();
+
+        var text =
+          '*Contato — Qualiconsul*\n\n' +
+          '*Nome:* ' + name + '\n' +
+          '*Serviço de interesse:* ' + service + '\n' +
+          '*Telefone:* ' + phone + '\n' +
+          '*E-mail:* ' + email + '\n\n' +
+          '*Mensagem:*\n' + message;
+
+        var whatsappUrl =
+          'https://api.whatsapp.com/send?phone=' + whatsappNumber + '&text=' + encodeURIComponent(text);
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      });
+    })();
   </script>
 </body>
 

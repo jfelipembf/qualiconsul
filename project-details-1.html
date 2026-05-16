@@ -2,15 +2,12 @@
 <html class="no-js" lang="pt-BR">
 
 <head>
-  <!-- Meta Tags -->
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Thememarch" />
-  <!-- Favicon Icon -->
   <link rel="icon" href="assets/img/iconQuali.png" />
-  <!-- Site Title -->
-  <title>Qualiconsul — Portfólio de Projetos Industriais</title>
+  <title>Qualiconsul</title>
   <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css" />
   <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
@@ -18,58 +15,21 @@
   <link rel="stylesheet" href="assets/css/plugins/aos.css" />
   <link rel="stylesheet" href="assets/css/style.css?v=3" />
   <style>
-    /* Item de menu ativo (sem link) — alinhado ao nav desktop */
-    @media screen and (min-width: 1200px) {
-      .cs_site_header .cs_nav .cs_nav_list > li.active > .active-page {
-        padding: 10px 0;
-        display: inline-flex;
-        align-items: center;
-        height: inherit;
-        position: relative;
-        font-weight: 600;
-        cursor: default;
-        pointer-events: none;
-        opacity: 1;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.9);
-      }
-      .cs_site_header .cs_nav .cs_nav_list > li.active > .active-page span {
-        color: inherit;
-      }
-    }
-    @media screen and (max-width: 1199px) {
-      .cs_site_header .cs_nav .cs_nav_list > li.active > .active-page {
-        font-weight: 600;
-        opacity: 1;
-        cursor: default;
-        pointer-events: none;
-      }
-    }
-    /* Grade de projetos — proporção uniforme e imagens alinhadas */
-    .projects-list .project-item .project-item-in {
-      position: relative;
+    .scolling-content .project-detail-hero {
       width: 100%;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-    }
-    .projects-list .project-item .project-item-in > a {
-      display: block;
-      width: 100%;
-      height: 100%;
-      line-height: 0;
-    }
-    .projects-list .project-item .project-item-in img {
-      width: 100% !important;
-      height: 100% !important;
-      max-width: 100%;
+      max-height: 520px;
+      height: auto;
       object-fit: cover;
       object-position: center;
       display: block;
+    }
+    @media screen and (max-width: 991px) {
+      .scolling-content .project-detail-hero { max-height: 360px; }
     }
   </style>
 </head>
 
 <body>
-     <!-- Start Preloader -->
      <div id="constr-preloader">
       <div id="constr-status" role="status" aria-live="polite">
         <div class="preloader-content">
@@ -86,16 +46,12 @@
         </div>
       </div>
     </div>
-    <!-- End Preloader -->
 
-  <!-- Start Header Section -->
   <header class="cs_site_header cs-header-with-bg cs_style1 cs_sticky_header themecolor-bg theme-dark">
 
-    <!-- Start Main Header Area -->
     <div class="cs_main_header">
 
       <div class="cs_main_header_in">
-        <!-- Start Main Header Left Area -->
         <div class="cs_main_header_left">
           <div class="cs-constr-header-logo">
             <a class="cs_site_branding" href="index.html">
@@ -103,35 +59,26 @@
             </a>
           </div>
         </div>
-        <!-- End Main Header Left Area -->
 
-        <!-- Start Main Header Middle Area -->
         <div class="cs-constr-header-middle">
           <div class="cs_nav cs_medium">
             <ul class="cs_nav_list">
               <li>
                 <a href="index.html" class="cs-text_b_line"><span>INÍCIO</span></a>
               </li>
-
               <li>
                 <a href="about.html" class="cs-text_b_line"><span>SOBRE NÓS</span></a>
               </li>
-
               <li>
                 <a href="service.html" class="cs-text_b_line"><span>SERVIÇOS</span></a>
               </li>
-
-              <li class="active">
-                <span class="cs-text_b_line active-page">
-                  <span>PROJETOS</span>
-                </span>
+              <li>
+                <a href="projects.html" class="cs-text_b_line"><span>PROJETOS</span></a>
               </li>
             </ul>
           </div>
         </div>
-        <!-- End Main Header Middle Area -->
 
-        <!-- Start Main Header Right Area -->
         <div class="cs_main_header_right" style="background-color: #2c3e50;">
 
 
@@ -159,107 +106,211 @@
           </div>
 
         </div>
-        <!-- End Main Header Right Area -->
       </div>
 
     </div>
-    <!-- End Main Header Area -->
 
   </header>
-  <!-- End Header Section -->
 
-  <div class="cs-height-80"></div>
-
-  <!-- Start Projects Section-->
-  <section class="projects-list">
-    <div class="container lg-gutter-control">
-      <div class="row">
-        <div class="col-xl-6 col-md-12">
-          <div class="project-item" data-aos="fade-up" data-aos-duration="300">
-            <div class="project-item-in">
-              <a href="project-details-1.html">
-                <img src="assets/img/projects/image04.jpeg" alt="Obra industrial em execução — Qualiconsul">
-              </a>
+  <section>
+    <div class="cs-breadcrumb-wrap theme-dark" data-src="assets/img/serv.QualiConsul/CONSTRUÇÃO CIVIL EM GERAL 6.jpeg">
+      <div class="container">
+        <div class="row cs_center">
+          <div class="cs-bread-page-title-area">
+            <div class="cs-page-title">
+              <h2 class="cs_white_color">Bases circulares</h2>
             </div>
-            <div class="project-item-text">
-              <div class="tag-item">
-                <a href="project-details-1.html"><span>Infraestrutura industrial</span></a>
-              </div>
-              <a href="project-details-1.html"><h5>Construção e concretagem de bases circulares industriais</h5></a>
-              <a href="project-details-1.html" class="cs-text_b_line"><span>VER PROJETO</span>
-                <i class="flaticon-right-arrow"></i>
-              </a>
+            <div class="breadcrumb">
+              <ul>
+                <li>
+                  <a href="index.html" class="cs-text_b_line"><span>INÍCIO</span></a>
+                </li>
+                <li>/</li>
+                <li>
+                  <a href="projects.html" class="cs-text_b_line"><span>PROJETOS</span></a>
+                </li>
+                
+              </ul>
             </div>
+            <div class="cs-height-15"></div>
+            <p class="cs_white_color" style="max-width:720px;margin:0 auto;opacity:.92"><a href="projects.html" class="cs-text_b_line"><span>← Voltar ao portfólio</span></a></p>
           </div>
-          <div class="cs-height-30"></div>
         </div>
-        <div class="col-xl-6 col-md-12">
-          <div class="project-item" data-aos="fade-up" data-aos-duration="500">
-            <div class="project-item-in">
-              <a href="project-details-2.html">
-                <img src="assets/img/projects/image02.jpeg" alt="Montagem estrutural em planta industrial">
-              </a>
-            </div>
-            <div class="project-item-text">
-              <div class="tag-item">
-                <a href="project-details-2.html"><span>Montagem industrial</span></a>
-              </div>
-              <a href="project-details-2.html"><h5>Estruturas metálicas e tanques de processo</h5></a>
-              <a href="project-details-2.html" class="cs-text_b_line"><span>VER PROJETO</span>
-                <i class="flaticon-right-arrow"></i>
-              </a>
-            </div>
-          </div>
-          <div class="cs-height-30"></div>
-        </div>
-        <div class="col-xl-6 col-md-12">
-          <div class="project-item" data-aos="fade-up" data-aos-duration="700">
-            <div class="project-item-in">
-              <a href="project-details-3.html">
-                <img src="assets/img/projects/image03.jpeg" alt="Equipe técnica em adequação normativa">
-              </a>
-            </div>
-            <div class="project-item-text">
-              <div class="tag-item">
-                <a href="project-details-3.html"><span>Manutenção industrial </span></a>
-              </div>
-              <a href="project-details-3.html"><h5>Manutenção e confiabilidade</h5></a>
-              <a href="project-details-3.html" class="cs-text_b_line"><span>VER PROJETO</span>
-                <i class="flaticon-right-arrow"></i>
-              </a>
-            </div>
-          </div>
-          <div class="cs-height-30"></div>
-        </div>
-        <div class="col-xl-6 col-md-12">
-          <div class="project-item" data-aos="fade-up" data-aos-duration="900">
-            <div class="project-item-in">
-              <a href="project-details-4.html">
-                <img src="assets/img/projects/image05.5.jpeg" alt="Instalações elétricas industriais">
-              </a>
-            </div>
-            <div class="project-item-text">
-              <div class="tag-item">
-                <a href="project-details-4.html"><span>Infraestrutura Industrial</span></a>
-              </div>
-              <a href="project-details-4.html"><h5>Infraestrutura Civil Industrial</h5></a>
-              <a href="project-details-4.html" class="cs-text_b_line"><span>VER PROJETO</span>
-                <i class="flaticon-right-arrow"></i>
-              </a>
-            </div>
-          </div>
-          <div class="cs-height-30"></div>
-        </div>
-        <div class="col-xl-6 col-md-12">
-     
-
       </div>
     </div>
   </section>
-  <!-- End Projects Section-->
 
   
-  <!-- Section to Section Gap -->
+
+  <section>
+    <div class="container">
+      <div class="row stickysec-wrap">
+          <div class="col-lg-8 col-md-12 scolling-content">
+              <div class="scolling-content">
+                  <img class="project-detail-hero" data-aos="fade-top" data-aos-duration="400" src="assets/img/projects/image04.jpeg" alt="Implantação de infraestrutura industrial">
+                      <div class="cs-height-50"></div>
+                      <h3>Execução de bases circulares para tanques industriais</h3>
+                      <div class="cs-height-10"></div>
+                      <p>Execução de fundações circulares em concreto armado destinadas à instalação de tanques industriais de armazenamento, com controle rigoroso de nivelamento, resistência estrutural e acabamento superficial.</p>
+                      <p>As atividades incluíram montagem de formas radiais, armação metálica, lançamento e acabamento mecânico do concreto, seguindo critérios técnicos de engenharia civil industrial e normas aplicáveis para estruturas de grande porte.</p>
+
+                      <div class="cs-height-30"></div>
+
+                      <h5>Visão geral do projeto</h5>
+                      <div class="cs-height-10"></div>
+                      <p>O projeto contemplou a construção simultânea de bases circulares para futura implantação de tanques metálicos industriais, priorizando estabilidade estrutural, uniformidade geométrica e controle tecnológico do concreto.</p>
+                      <div class="cs-height-35"></div>
+
+                      <blockquote class="theme-border-wrap" data-src="assets/img/cta-bg.jpg">
+
+                        <div class="b-top-left">
+                          <div class="horizontal"></div>
+                          <div class="verticle"></div>
+                        </div>
+
+                        <div class="b-top-right d-flex">
+                          <div class="horizontal"></div>
+                          <div class="verticle"></div>
+                        </div>
+
+                        <div class="b-bottom-right d-flex flex-end">
+
+                          <div class="horizontal"></div>
+                          <div class="verticle"></div>
+                        </div>
+
+                        <div class="b-bottom-left">
+                          <div class="verticle"></div>
+                          <div class="horizontal"></div>
+                        </div>
+
+                        &ldquo; Assegurar precisão estrutural e qualidade executiva em fundações industriais é essencial para a segurança e longevidade operacional dos ativos.&rdquo;
+                      </blockquote>
+
+                      <div class="cs-height-50"></div>
+
+                      <h5>Engenharia e preparação estrutural</h5>
+                      <div class="cs-height-10"></div>
+                      <p>A engenharia executiva definiu o dimensionamento das fundações considerando distribuição de cargas, recalque admissível do solo e esforços provenientes da operação dos tanques.</p>
+                      <div class="cs-height-10"></div>
+
+                      <p>O processo construtivo utilizou escoramentos periféricos, controle topográfico contínuo e procedimentos de concretagem planejados para garantir integridade estrutural e acabamento homogêneo.</p>
+
+                      <div class="cs-height-40"></div>
+
+                      <h5>Processo de execução e controle de campo</h5>
+                      <div class="cs-height-10"></div>
+
+                      <p> Planejamento integrado das etapas de armação, forma, concretagem e cura, com acompanhamento técnico em campo e verificação dimensional em todos os marcos críticos da execução.</p>
+
+                      <div class="cs-height-30"></div>
+
+                      <div class="cs-constr-process">
+                        <div class="row">
+                          <div class="col-xl-6 col-md-6">
+                            <div class="process-item" data-aos="fade-top" data-aos-duration="400">
+                            <h6>Terraplenagem e preparação da base</h6>
+                            <p>Regularização do terreno, compactação controlada e preparação da plataforma para execução das fundações circulares.</p></div>
+                            <div class="cs-height-30"></div>
+                          </div>
+                          <div class="col-xl-6 col-md-6">
+                            <div class="process-item" data-aos="fade-top" data-aos-duration="500">
+                            <h6>Montagem de formas e armação</h6>
+                            <p>Execução de formas radiais e posicionamento das armaduras conforme projeto estrutural e especificações técnicas.</p></div>
+                            <div class="cs-height-30"></div>
+                          </div>
+                          <div class="col-xl-6 col-md-6">
+                            <div class="process-item" data-aos="fade-top" data-aos-duration="600">
+                            <h6>Concretagem e acabamento superficial</h6>
+                            <p>Lançamento contínuo do concreto com nivelamento técnico, adensamento mecânico e acabamento superficial desempenado.</p></div>
+                            <div class="cs-height-30"></div>
+                          </div>
+                          <div class="col-xl-6 col-md-6">
+                            <div class="process-item" data-aos="fade-top" data-aos-duration="700">
+                            <h6>Cura e controle tecnológico</h6>
+                            <p>Monitoramento do processo de cura, ensaios tecnológicos do concreto e inspeções dimensionais para liberação estrutural.</p></div>
+                            <div class="cs-height-30"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                    <div class="cs-height-15"></div>
+
+                    <h5>Desafios e soluções técnicas</h5>
+                      <div class="cs-height-10"></div>
+
+                      <p>As dimensões elevadas das estruturas exigiram planejamento rigoroso da concretagem para evitar juntas frias, retrações excessivas e desvios geométricos.</p>
+
+                      <div class="cs-height-30"></div>
+
+                      <div class="cs-constr-process">
+                        <div class="row">
+                          <div class="col-xl-5 col-md-5" data-aos="fade-top" data-aos-duration="400">
+                            <h6>Controle geométrico e nivelamento</h6>
+                            <p>Utilização de referências topográficas e conferências contínuas para garantir planicidade e alinhamento circular das bases.</p>
+                          </div>
+                          <div class="col-xl-2">
+                            <div class="cs-border-pr"></div>
+                          </div>
+                          <div class="col-xl-5 col-md-5" data-aos="fade-top" data-aos-duration="600">
+                            <h6>Controle de qualidade do concreto</h6>
+                            <p>Acompanhamento de slump test, resistência mecânica e rastreabilidade dos lotes aplicados durante toda a execução.</p>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    <div class="cs-height-40"></div>
+
+                    <h5>Resultado</h5>
+                    <div class="cs-height-10"></div>
+
+                    <p>As fundações foram entregues com elevado padrão de acabamento, conformidade dimensional e desempenho estrutural compatível com os requisitos operacionais dos tanques industriais previstos para a planta.</p>
+                    <div class="cs-height-30"></div>
+                    <img class="project-detail-hero" data-aos="fade-top" data-aos-duration="400" src="assets/img/projects/image04.4.jpeg" alt="Registro complementar do projeto">
+
+
+                      <div class="cs-height-50"></div>
+
+                    <p>A execução reforçou os padrões de qualidade e controle técnico aplicados pela Qualiconsul em obras industriais de infraestrutura pesada, assegurando confiabilidade, durabilidade e segurança operacional para futuras etapas de montagem eletromecânica.</p>
+                </div>
+            </div>
+          <div class="col-lg-4 col-md-12 sticky-box">
+            <div class="widget-item widget-sidebar pw theme-dark sticky-box-child">
+              <h6>Informações do projeto</h6>
+              <div class="cs-height-30"></div>
+              <div class="project-info">
+                <div class="p-info-item">
+                  <p>Nome do projeto:</p>
+                  <h6>Execução de bases circulares para tanques industriais</h6>
+                </div>
+                <div class="p-info-item">
+                  <p>Localização:</p>
+                  <h6>Baixada Fluminense, RJ</h6>
+                </div>
+                <div class="p-info-item">
+                  <p>Cliente:</p>
+                  <h6>Operadora industrial do segmento de armazenamento e processo</h6>
+                </div>
+                <div class="p-info-item">
+                  <p>Data de conclusão:</p>
+                  <h6>Março de 2024</h6>
+                </div>
+                <div class="p-info-item">
+                  <p>Escopo:</p>
+                  <h6>Execução de fundações circulares em concreto armado, preparação de base, formas, armação, concretagem e acabamento estrutural</h6>
+                <div class="p-info-item">
+                  <p>Segmento:</p>
+                  <h6>Construção civil industrial e infraestrutura pesada</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <div class="cs-section-height"></div>
 
   <section>
     <div class="cs-cta-wrap" data-src="assets/img/cta-bg.jpg">
@@ -270,9 +321,9 @@
             <div class="cta-content max-width-800 m-auto">
               <div class="cs-height-100"></div>
               <h2 data-aos="fade-up" data-aos-duration="400">Excelência em <span class="themecolor" data-aos="fade-up" data-aos-duration="1000">montagens industriais</span> com rigor técnico e conformidade</h2>
-              
+
               <div class="cs-height-15"></div>
-  
+
               <p>Cada entrega é conduzida sob critérios de inspeção de qualidade, rastreabilidade de processos e disciplina operacional, assegurando precisão na execução, aderência a normas aplicáveis e confiabilidade em ambientes de alta criticidade. Unimos engenharia, supervisão técnica e governança de campo para transformar escopo em resultado industrial mensurável, com segurança, previsibilidade e excelência na conclusão dos projetos.</p>
               <div class="cs-height-25"></div>
 
@@ -317,7 +368,7 @@
     </div>
   </section>
 
-  <!-- Start Footer -->
+
   <footer>
     <div class="cs-constr-footer-container theme-dark" data-src="assets/img/footer-bg.png">
 
@@ -452,16 +503,12 @@
 
     </div>
   </footer>
-  <!-- End Footer -->
+  
 
-  <!-- Start Scrollup -->
   <span class="cs_scrollup">
     <i class="flaticon-top"></i>
   </span>
-  <!-- End Scrollup -->
 
-  <!-- Script -->
-  <!-- Script -->
   <script src="assets/js/plugins/jquery-3.7.0.min.js"></script>
   <script src="assets/js/plugins/lightgallery.min.js"></script>
   <script src="assets/js/plugins/swiper.min.js"></script>
