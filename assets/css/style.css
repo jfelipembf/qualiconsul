@@ -7450,4 +7450,229 @@ button i {
 
 }
 
+/*--------------------------------------------------------------
+  Footer — refinamentos visuais incrementais
+----------------------------------------------------------------*/
+footer .cs-constr-footer-container {
+  position: relative;
+}
+
+footer .cs-constr-footer-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--themecolor), transparent);
+  opacity: 0.35;
+  z-index: 1;
+}
+
+footer .cs-constr-footer-content {
+  position: relative;
+  z-index: 1;
+}
+
+footer .cs-footer-widget > div > p {
+  line-height: 1.75;
+  opacity: 0.82;
+  max-width: 320px;
+}
+
+footer .cs-footer-widget > div > a img {
+  transition: opacity 0.3s ease;
+}
+
+footer .cs-footer-widget > div > a:hover img {
+  opacity: 0.88;
+}
+
+footer .cs-footer-widget-title h6 {
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+footer .cs-footer-widget-title h6::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--themecolor);
+  margin-top: 10px;
+  border-radius: 1px;
+  opacity: 0.85;
+}
+
+footer .cs-footer-widget > p {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 6px;
+}
+
+footer .cs-footer-widget > a.cs-font-size-20,
+footer .cs-footer-widget > a.cs-text-style-h4 {
+  display: inline-block;
+  line-height: 1.45;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+footer .cs-footer-widget > a.cs-font-size-20:hover,
+footer .cs-footer-widget > a.cs-text-style-h4:hover {
+  color: var(--themecolor);
+  opacity: 1;
+}
+
+footer .cs-footer-widget > span.cs-font-size-20 {
+  line-height: 1.55;
+  opacity: 0.9;
+  display: block;
+}
+
+footer .cs-constr-newsletter {
+  max-width: 360px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+footer .cs-constr-newsletter .cs-newsletter-email {
+  padding: 16px 20px;
+  padding-right: 130px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+footer .cs-constr-newsletter .cs-newsletter-email:focus {
+  border-color: var(--themecolor);
+  box-shadow: 0 0 0 3px rgba(49, 197, 255, 0.15);
+}
+
+footer .cs-constr-newsletter .cs-newsletter-btn,
+footer .cs-constr-newsletter button[type=submit] {
+  padding: 16px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+footer .theme-social ul {
+  gap: 10px;
+}
+
+footer .theme-social ul li a {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 15px;
+  border: 1px solid transparent;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
+}
+
+footer .theme-social ul li a:hover {
+  border-color: rgba(49, 197, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+footer .cs-constr-footer-menu ul li {
+  padding-bottom: 14px;
+  display: flex;
+  align-items: center;
+}
+
+footer .cs-constr-footer-menu ul li i {
+  margin-right: 12px;
+  font-size: 11px;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+footer .cs-constr-footer-menu ul li a span {
+  opacity: 0.88;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  transition: opacity 0.25s ease, color 0.25s ease;
+}
+
+footer .cs-constr-footer-menu ul li:hover i {
+  transform: translateX(3px);
+}
+
+footer .cs-constr-footer-menu ul li:hover a span {
+  opacity: 1;
+  color: var(--theme_white);
+}
+
+footer .cs-constr-footer-container .cs-height-150 {
+  height: 100px;
+}
+
+footer .cs-constr-footer-container .cs-height-130 {
+  height: 70px;
+}
+
+footer .cs-theme-copyright {
+  height: auto;
+  min-height: 72px;
+  padding: 24px 30px;
+  background: rgba(0, 0, 0, 0.12);
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+footer .cs-theme-copyright .cs-footer-copy-text p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+}
+
+footer .cs-theme-copyright .cs-footer-copy-text p a.themecolor {
+  transition: opacity 0.25s ease;
+}
+
+footer .cs-theme-copyright .cs-footer-copy-text p a.themecolor:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 1199px) {
+  footer .cs-constr-footer-container .cs-height-150 {
+    height: 60px;
+  }
+
+  footer .cs-constr-footer-container .cs-height-130 {
+    height: 50px;
+  }
+
+  footer .cs-footer-widget-title h6::after {
+    width: 28px;
+  }
+
+  footer .cs-constr-newsletter {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .cs-theme-copyright {
+    min-height: 64px;
+    padding: 20px;
+  }
+
+  footer .cs-theme-copyright .cs-footer-copy-text p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  footer .cs-constr-footer-menu ul li {
+    padding-bottom: 12px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
