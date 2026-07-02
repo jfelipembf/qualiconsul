@@ -1,0 +1,35 @@
+/* Validação visual — mantém o layout do tema */
+#whatsappForm .contact-field-col {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+#whatsappForm .input-col-two {
+  align-items: flex-start;
+}
+@media screen and (max-width: 991px) {
+  #whatsappForm .input-col-two {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+#whatsappForm input.is-invalid,
+#whatsappForm select.is-invalid,
+#whatsappForm textarea.is-invalid {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 1px rgba(220, 53, 69, 0.12);
+}
+#whatsappForm .field-msg {
+  font-size: 0.8125rem;
+  color: #c0392b;
+  margin-top: 6px;
+  line-height: 1.35;
+  min-height: 1.2em;
+}
+#whatsappForm .field-msg:empty {
+  display: none;
+}
+#whatsappForm textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
