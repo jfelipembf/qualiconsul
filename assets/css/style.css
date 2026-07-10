@@ -7678,4 +7678,12 @@ footer .cs-theme-copyright .cs-footer-copy-text p a.themecolor:hover {
   }
 }
 
+
+/* Nova regra para o botão de contato na seção Hero */
+.hero-contact-button {
+  padding: 18px 30px; /* Ajusta o preenchimento para um tamanho adequado */
+  min-width: 180px; /* Garante uma largura mínima, mantendo a flexibilidade */
+  text-align: center; /* Centraliza o texto */
+  display: inline-block; /* Garante que o padding e min-width funcionem corretamente */
+}
 /*# sourceMappingURL=style.css.map */
